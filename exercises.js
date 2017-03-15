@@ -1,11 +1,27 @@
 //Do not change any of the function names
 
 function getBiggest(x, y) {
+    if (x > y) {
+        return (x);
+    } else if (x < y) {
+        return (y);
+    } else if (x === y){
+        return (x || y);
+    }
   //x and y are integers.  Return the larger integer
   //if they are the same return either one
 }
 
 function greeting(language) {
+    if (language === 'German') {
+        return ('Guten Tag!');
+    } else if (language === 'English') {
+        return ('Hello!');
+    } else if (language === 'Spanish') {
+        return ('Hola!');
+    } else {
+        return ('Hello!');
+    }
   //return a greeting for three different languages:
   //language: 'German' -> 'Guten Tag!'
   //language: 'English' -> 'Hello!'
@@ -14,15 +30,29 @@ function greeting(language) {
 }
 
 function isTenOrFive(num) {
+    if (num === 10 || num === 5) {
+        return (true);
+    }
+        return (false);
+    
   //return true if num is 10 or 5
   //otherwise return false
 }
 
 function isInRange(num) {
+    if (num > 20 && num < 50) {
+        return (true);
+    }
+        return (false);
   //return true if num is less than 50 and greater than 20
 }
 
 function isInteger(num) {
+    if (Math.floor(num) === num) {
+        return true;
+    } else {
+        return false;
+    }
   //return true if num is an integer
   //0.8 -> false
   //1 -> true
@@ -32,6 +62,15 @@ function isInteger(num) {
 }
 
 function fizzBuzz(num) {
+    if (num % 3 === 0 && num % 5 === 0) {
+        return 'fizzbuzz';
+    } else if (num % 3 === 0) {
+        return 'fizz';
+    } else if (num % 5 === 0) {
+        return 'buzz';
+    } else {
+        return num;
+    }
   //if num is divisible by 3 return 'fizz'
   //if num is divisible by 5 return 'buzz'
   //if num is divisible by 3 & 5 return 'fizzbuzz'
@@ -39,6 +78,16 @@ function fizzBuzz(num) {
 }
 
 function isPrime(num) {
+    if (num === 0 || num === 1) {
+        return false;
+    }
+    for (var i = 2; i < num ; i++) {
+        if (num % i === 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
   //return true if num is prime.
   //otherwise return false
   //hint: a prime number is only evenly divisible by itself and 1
@@ -47,35 +96,52 @@ function isPrime(num) {
 }
 
 function returnFirst(arr) {
+    return arr.shift();
   //return the first item from the array
 }
 
 function returnLast(arr) {
+    return arr.pop();
   //return the last item of the array
 }
 
 function getArrayLength(arr) {
+    return arr.length;
   //return the length of the array
 }
 
 function incrementByOne(arr) {
+    for (var i = 0; i <= arr.length - 1; i++) {
+        arr[i] = arr [i] + 1;
+    }
+    return arr;
   //arr is an array of integers  
   //increase each integer by one
   //return the array
 }
 
 function addItemToArray(arr, item) {
+    arr.push(item);
+    
+    return arr;
+    
   //add the item to the end of the array
   //return the array
 }
 
 function addItemToFront(arr, item) {
+    arr.unshift(item);
+    
+    return arr;
+    
   //add the item to the front of the array
   //return the array
   //hint: use the array method .unshift
 }
 
 function wordsToSentence(words) {
+    return (words.join(' '));
+    
   //words is an array of strings
   //return a string that is all of the words concatenated together
   //spaces need to be between each word
@@ -83,11 +149,22 @@ function wordsToSentence(words) {
 }
 
 function contains(arr, item) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === item) {
+            return true;
+        }
+    }
+    return false;
   //check to see if item is inside of arr
   //return true if it is, otherwise return false
 }
 
 function addNumbers(numbers) {
+    var sum = numbers[0];
+    for (var i = 1; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+    }
+    return sum;
   //numbers is an array of integers.
   //add all of the integers and return the value
 }
