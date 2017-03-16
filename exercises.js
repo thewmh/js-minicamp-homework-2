@@ -34,7 +34,7 @@ function isTenOrFive(num) {
         return (true);
     }
         return (false);
-    
+
   //return true if num is 10 or 5
   //otherwise return false
 }
@@ -115,25 +115,25 @@ function incrementByOne(arr) {
         arr[i] = arr [i] + 1;
     }
     return arr;
-  //arr is an array of integers  
+  //arr is an array of integers
   //increase each integer by one
   //return the array
 }
 
 function addItemToArray(arr, item) {
     arr.push(item);
-    
+
     return arr;
-    
+
   //add the item to the end of the array
   //return the array
 }
 
 function addItemToFront(arr, item) {
     arr.unshift(item);
-    
+
     return arr;
-    
+
   //add the item to the front of the array
   //return the array
   //hint: use the array method .unshift
@@ -141,7 +141,7 @@ function addItemToFront(arr, item) {
 
 function wordsToSentence(words) {
     return (words.join(' '));
-    
+
   //words is an array of strings
   //return a string that is all of the words concatenated together
   //spaces need to be between each word
@@ -170,11 +170,19 @@ function addNumbers(numbers) {
 }
 
 function averageTestScore(testScores) {
+  var average = 0;
+  for (var i = 0; i < testScores.length; i++) {
+    average += testScores[i];
+  }
+  var avg = average / testScores.length;
+
+  return avg;
   //testScores is an array.  Iterate over testScores and compute the average.
   //return the average
 }
 
 function largestNumber(numbers) {
+  return Math.max.apply(null, numbers);
   //numbers is an array of integers
   //return the largest integer
 }
