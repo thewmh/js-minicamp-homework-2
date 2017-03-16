@@ -1,0 +1,9 @@
+a 'for loop' is used to iterate over an array
+
+&& means 'and' || means 'or' ! means 'not'
+
+an Array is essentially a group of variables
+
+git is a version control platform
+
+GitHub is a platform which can host the iterations of your code. It is useful for code collaboration
